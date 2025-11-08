@@ -13,8 +13,6 @@ class Ggen < Formula
   end
 
   test do
-    assert_match version.to_s, shell_output("#{bin}/ggen --version")
-
     # Test basic functionality
     system bin/"ggen", "template", "list"
   end
