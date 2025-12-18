@@ -1,8 +1,8 @@
 class Ggen < Formula
   desc "Deterministic, language-agnostic code generation framework"
   homepage "https://github.com/seanchatmangpt/ggen"
-  url "https://github.com/seanchatmangpt/ggen/archive/refs/tags/v3.4.1.tar.gz"
-  sha256 "4b6e49c7c5becbc1812d3ff43a9ab4d664fb0bba4160545540a9242520795cae"
+  url "https://github.com/seanchatmangpt/ggen/archive/refs/tags/v5.0.0.tar.gz"
+  sha256 "b950e2e816918e0c92c6d7aad9dcf12c14a34031074bd2a450b64a609426d397"
   license "MIT"
   head "https://github.com/seanchatmangpt/ggen.git", branch: "master"
 
@@ -14,6 +14,6 @@ class Ggen < Formula
 
   test do
     # Test basic functionality
-    system bin/"ggen", "template", "list"
+    assert_match "ggen", shell_output("#{bin}/ggen --version")
   end
 end
