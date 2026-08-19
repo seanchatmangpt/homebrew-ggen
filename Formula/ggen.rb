@@ -1,27 +1,27 @@
 class Ggen < Formula
   desc "Deterministic, language-agnostic code generation framework"
   homepage "https://github.com/seanchatmangpt/ggen"
-  version "26.8.6"
+  version "26.8.18"
   license "MIT"
   head "https://github.com/seanchatmangpt/ggen.git", branch: "main"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/seanchatmangpt/ggen/releases/download/v26.8.6/ggen-aarch64-apple-darwin.tar.gz"
-      sha256 "90f536673fe2f3d94af2ffea4789bc06d7a45fce1f4cd43a602c911098b3bb92"
+      url "https://github.com/seanchatmangpt/ggen/releases/download/v26.8.18/ggen-aarch64-apple-darwin.tar.gz"
+      sha256 "152da23e36d4c2ccc8c8ce9fd53bafea17b3f9e7e5de79bd4ab54f757746e0cf"
     else
-      url "https://github.com/seanchatmangpt/ggen/releases/download/v26.8.6/ggen-x86_64-apple-darwin.tar.gz"
-      sha256 "fcc2dbfdd8a1cd675383513955a5be2f2ab9cee7f315fd715b7a88481f9745d5"
+      url "https://github.com/seanchatmangpt/ggen/releases/download/v26.8.18/ggen-x86_64-apple-darwin.tar.gz"
+      sha256 "a005ed8ef64c544cf4f43555e62a1ec6be652be31086bf5db237af9b3068c028"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/seanchatmangpt/ggen/releases/download/v26.8.6/ggen-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "080b93c75802f34a608d99a3f0a7c44299476f35411b9564e5515d45de29b6b5"
+      url "https://github.com/seanchatmangpt/ggen/releases/download/v26.8.18/ggen-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "f0f714208ef0acd2d690fa8f3221ee3e8eec3077666dbd285fe71d764f261c02"
     else
-      url "https://github.com/seanchatmangpt/ggen/releases/download/v26.8.6/ggen-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "4a8e957858423ae88e50278442c8c6bf5d44d24f8061774a911185cfe74ee469"
+      url "https://github.com/seanchatmangpt/ggen/releases/download/v26.8.18/ggen-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "bf64d31f7dcb3c6eaaa03b3a23d9f4f1de8aa3fe53aa16fe62ce1d06fa109e38"
     end
   end
 
@@ -30,6 +30,6 @@ class Ggen < Formula
   end
 
   test do
-    assert_match "ggen 26.8.6", shell_output("#{bin}/ggen --version")
+    assert_match "ggen 26.8.18", shell_output("#{bin}/ggen --version")
   end
 end
