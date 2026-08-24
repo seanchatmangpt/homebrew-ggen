@@ -1,7 +1,6 @@
 class Ggen < Formula
   desc "Deterministic, language-agnostic code generation framework"
   homepage "https://github.com/seanchatmangpt/ggen"
-  version "26.8.18"
   license "MIT"
   head "https://github.com/seanchatmangpt/ggen.git", branch: "main"
 
